@@ -431,7 +431,7 @@ a {
 }
 
 .main {
-  margin-top: 0.9375rem;
+  margin-block: 0.9375rem;
   width: 100%;
 }
 @media (width > 77.56125rem) {
@@ -554,7 +554,6 @@ a {
 .hero__try {
   display: flex;
   align-items: center;
-  margin-top: 3.0625rem;
   padding-block: 1.0625rem 1.25rem;
   background-color: var(--color-yellow);
   border-radius: var(--border-radius);
@@ -701,7 +700,7 @@ a {
 .card-buy__inner {
   padding-block: 0.9375rem;
   transition-duration: var(--transition-duration);
-  margin-top: 1.4375rem;
+  margin-block: 1.4375rem 3.0625rem;
   position: relative;
   background-color: var(--color-purple);
   border: 0.125rem solid var(--color-purple);
@@ -911,16 +910,15 @@ a {
   }
 }
 .card-benefit__icon {
-  --iconWidth: 0.9375rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: var(--iconWidth);
   fill: var(--color-purple);
 }
 @media (width > 30.06125rem) {
   .card-benefit__icon {
-    --iconWidth: 1.5rem;
+    width: 1.5rem;
+    height: 1.5rem;
   }
 }
 
@@ -1064,10 +1062,11 @@ a {
 
 .swiper {
   --swiper-theme-color: var(--color-yellow);
+  --swiper-pagination-bottom: 1.875rem;
   display: flex;
   align-items: center;
-  overflow: visible;
   flex-direction: column;
+  position: relative;
 }
 .swiper-slide {
   flex-grow: 1;
@@ -1086,7 +1085,6 @@ a {
 }
 .swiper-pagination {
   position: absolute;
-  top: 100% !important;
 }
 
 @media (width > 77.56125rem) {

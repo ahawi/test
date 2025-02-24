@@ -4,7 +4,7 @@
   &__inner {
     padding-block: rem(15);
     transition-duration: var(--transition-duration);
-    margin-top: rem(23);
+    margin-block: rem(23) rem(49);
     position: relative;
     background-color: var(--color-purple);
     border: rem(2) solid var(--color-purple);

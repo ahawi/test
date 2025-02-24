@@ -1,7 +1,7 @@
 @use '../helpers/' as *;
 
 .main {
-  margin-top: rem(15);
+  margin-block: rem(15);
   width: 100%;
 
   @include desktop-above {

@@ -2,10 +2,12 @@
 
 .swiper {
   --swiper-theme-color: var(--color-yellow);
+  --swiper-pagination-bottom: #{rem(30)};
+
   @include center-x;
 
-  overflow: visible;
   flex-direction: column;
+  position: relative;
 
   &-slide {
     flex-grow: 1;
@@ -27,6 +29,5 @@
 
   &-pagination {
     position: absolute;
-    top: 100% !important;
   }
 }

@@ -42,16 +42,14 @@
   }
 
   &__icon {
-    --iconWidth: #{rem(15)};
-
     @include center-x;
 
     justify-content: center;
-    width: var(--iconWidth);
     fill: var(--color-purple);
 
     @include mobile-s-above {
-      --iconWidth: #{rem(24)};
+      width: rem(24);
+      height: rem(24);
     }
   }
 }
