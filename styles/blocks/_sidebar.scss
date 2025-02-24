@@ -102,6 +102,10 @@
     &-button {
       position: relative;
       outline: none;
+      border: none;
+      background: none;
+      appearance: none;
+      -webkit-tap-highlight-color: transparent;
 
       &::before,
       &::after {

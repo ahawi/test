@@ -1026,6 +1026,12 @@ a {
 .sidebar__overlay-button {
   position: relative;
   outline: none;
+  border: none;
+  background: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  -webkit-tap-highlight-color: transparent;
 }
 .sidebar__overlay-button::before, .sidebar__overlay-button::after {
   position: absolute;
