@@ -1,7 +1,7 @@
 @use 'sass:math';
 @use 'functions' as *;
 
-@mixin fluid-text($max: 48, $min: 16) {
+@mixin fluid-text($max, $min) {
   font-size: fluid($max, $min);
 }
 

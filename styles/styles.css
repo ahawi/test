@@ -480,8 +480,8 @@ a {
 .hero__promo-title {
   font-size: clamp(1.875rem, 1.75rem + 0.625vw, 2.5rem);
   color: var(--color-yellow);
-  text-stroke: 0.0625rem var(--color-light);
-  -webkit-text-stroke: 0.0625rem var(--color-light);
+  text-stroke: 1px var(--color-light);
+  -webkit-text-stroke: 1px var(--color-light);
 }
 @media (width > 47.99875rem) {
   .hero__promo-subtitle {
@@ -608,11 +608,6 @@ a {
   left: 0.59375rem;
   height: 0.625rem;
   transform: rotate(45deg);
-}
-@media (width > 77.56125rem) {
-  .hero__checkbox-input::after {
-    left: 0.65625rem;
-  }
 }
 .hero__checkbox-input:checked {
   background-color: var(--color-purple);
@@ -816,7 +811,7 @@ a {
   margin-top: -0.125rem;
   border-radius: 50%;
   color: var(--color-dark);
-  font-size: 0.5rem;
+  font-size: 8px;
   padding: 0.25rem 0.1875rem;
   background-color: var(--color-yellow);
   margin-left: 0.3125rem;

@@ -35,10 +35,10 @@
 
     &-title {
       @include fluid-text(40, 30);
-      
+
       color: var(--color-yellow);
-      text-stroke: rem(1) var(--color-light);
-      -webkit-text-stroke: rem(1) var(--color-light);
+      text-stroke: 1px var(--color-light);
+      -webkit-text-stroke: 1px var(--color-light);
     }
 
     &-subtitle {
@@ -181,10 +181,6 @@
         left: rem(9.5);
         height: rem(10);
         transform: rotate(45deg);
-
-        @include desktop-above {
-          left: rem(10.5);
-        }
       }
 
       &:checked {
