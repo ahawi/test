@@ -1,0 +1,14 @@
+@use 'normalize';
+@use 'fonts';
+@use 'variables';
+@use 'utils';
+@use 'globals';
+
+@use 'blocks/header';
+@use 'blocks/main';
+@use 'blocks/hero';
+@use 'blocks/card-buy';
+@use 'blocks/card-benefit';
+@use 'blocks/sidebar';
+@use 'blocks/swiper';
+@use 'blocks/parallax';

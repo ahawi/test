@@ -1,0 +1,32 @@
+@use '../helpers/' as *;
+
+.swiper {
+  --swiper-theme-color: var(--color-yellow);
+  @include center-x;
+
+  overflow: visible;
+  flex-direction: column;
+
+  &-slide {
+    flex-grow: 1;
+    flex-basis: auto;
+    min-width: rem(280);
+    max-width: 100%;
+
+    &:first-child {
+      min-width: rem(260);
+      max-width: calc(100% - rem(20));
+      flex-grow: 1;
+      margin-left: rem(20);
+    }
+
+    &:has(.card-buy__inner .card-buy__offer) {
+      margin-left: rem(20);
+    }
+  }
+
+  &-pagination {
+    position: absolute;
+    top: 100% !important;
+  }
+}

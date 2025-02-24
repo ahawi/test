@@ -1,0 +1,23 @@
+@use 'helpers' as *;
+
+:root {
+  --color-light: #ffffff;
+  --color-dark: #000000;
+
+  --color-purple: #9564aa;
+  --color-purple-light: #9564aa1a;
+  --color-purple-dark: #684677;
+  --color-pink: #c15ca1;
+  --color-yellow: #ffcf2d;
+  --color-red: #aa6464;
+  --color-red-light: #aa646433;
+
+  --border-radius: #{rem(10)};
+
+  --font-family: 'Ubuntu', sans-serif;
+
+  --container-width: #{rem(1170)};
+  --container-padding-x: #{rem(20)};
+
+  --transition-duration: 0.2s;
+}

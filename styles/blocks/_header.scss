@@ -1,0 +1,125 @@
+@use '../helpers/' as *;
+
+.header {
+  height: rem(50);
+  background-color: var(--color-purple);
+
+  @include mobile-above {
+    min-height: rem(100);
+  }
+
+  &__inner {
+    padding-block: rem(17) rem(18);
+
+    @include mobile-above {
+      @include center-x;
+
+      justify-content: space-between;
+      padding-block: rem(35);
+    }
+
+    @include desktop-above {
+      column-gap: rem(40);
+      padding-block: rem(28);
+    }
+  }
+
+  &__logo {
+    flex: 1;
+
+    &-image {
+      flex-shrink: 0;
+    }
+  }
+
+  &__buttons {
+    @include center-x;
+
+    justify-content: space-between;
+    padding-inline: rem(7);
+
+    @include mobile-above {
+      width: 100%;
+    }
+
+    @include desktop-above {
+      width: auto;
+    }
+  }
+
+  &__menu {
+    &-button {
+      display: flex;
+      flex-direction: column;
+      row-gap: rem(4);
+      padding: 0;
+    }
+
+    &-line {
+      width: rem(23);
+      height: rem(2);
+      background-color: var(--color-light);
+    }
+  }
+
+  &__premium {
+    &-button {
+      @include center-x;
+
+      justify-content: center;
+      padding: 0;
+
+      @include mobile-above {
+        column-gap: rem(10);
+        background-color: var(--color-purple-dark);
+        padding: rem(6) rem(13);
+        border-radius: var(--border-radius);
+
+        @include hover {
+          background-color: var(--color-pink);
+        }
+      }
+
+      &-icon {
+        width: rem(18);
+        height: rem(15);
+      }
+    }
+
+    &-title {
+      color: var(--color-yellow);
+      font-weight: 600;
+    }
+  }
+
+  &__links {
+    display: flex;
+    column-gap: rem(41);
+  }
+
+  &__link {
+    color: var(--color-light);
+    font-weight: 600;
+    position: relative;
+    line-height: 1.5;
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      translate: -50%;
+      width: 0;
+      height: rem(2);
+      background-color: currentColor;
+      transition-duration: var(--transition-duration);
+    }
+    @include hover {
+      opacity: 0.8;
+
+      &::after {
+        width: 100%;
+      }
+    }
+  }
+}

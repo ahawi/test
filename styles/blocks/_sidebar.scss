@@ -1,0 +1,147 @@
+@use '../helpers/' as *;
+
+.sidebar {
+  display: none;
+
+  @include desktop-above {
+    display: block;
+    width: rem(270);
+  }
+
+  &__inner {
+    padding: rem(18);
+    background-color: var(--color-purple-light);
+    border-radius: var(--border-radius);
+    height: 100%;
+    border: rem(2) solid var(--color-purple-light);
+  }
+
+  &__top {
+    @include center-x;
+
+    border-bottom: rem(2) solid var(--color-purple-light);
+    padding-bottom: rem(18);
+    column-gap: rem(15);
+
+    &-container {
+      display: flex;
+      flex-direction: column;
+      row-gap: rem(5);
+    }
+
+    &-image {
+      border-radius: 50%;
+      border: rem(2) solid var(--color-light);
+    }
+
+    &-name {
+      font-weight: 700;
+    }
+  }
+
+  &__premium {
+    background-color: var(--color-purple-dark);
+    border-radius: rem(5);
+    padding: rem(5) rem(10);
+
+    @include hover {
+      background-color: var(--color-purple);
+    }
+
+    &-title {
+      font-size: rem(10);
+      color: var(--color-light);
+    }
+  }
+
+  &__list {
+    @include center-x;
+
+    flex-direction: column;
+    row-gap: rem(25);
+    width: 100%;
+    padding: rem(21) rem(12);
+  }
+
+  &__item {
+    width: 100%;
+  }
+
+  &__link {
+    @include center-x;
+
+    column-gap: rem(15);
+
+    @include hover {
+      opacity: 0.6;
+    }
+
+    &-text {
+      font-weight: 400;
+    }
+  }
+
+  &__icon {
+    fill: var(--color-purple);
+  }
+
+  &__overlay {
+    width: 100%;
+    height: 100%;
+    border: none;
+    background-color: #f4eff7;
+
+    &-wrapper {
+      display: flex;
+      justify-content: end;
+      position: relative;
+      top: rem(16);
+      right: rem(16);
+    }
+
+    &-button {
+      position: relative;
+
+      &::before,
+      &::after {
+        position: absolute;
+        content: '';
+        top: 50%;
+        left: 50%;
+        translate: -50% -50%;
+        width: rem(2);
+        background-color: var(--color-purple);
+      }
+
+      &::before {
+        height: rem(25);
+        transform: rotate(45deg);
+      }
+
+      &::after {
+        height: rem(25);
+        transform: rotate(-45deg);
+      }
+    }
+
+    &:modal {
+      max-width: 100%;
+      max-height: 100%;
+    }
+
+    .sidebar__list {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .sidebar__link,
+    .sidebar__top-name {
+      font-size: rem(20);
+    }
+
+    .sidebar__top-image {
+      width: rem(60);
+      height: rem(60);
+    }
+  }
+}

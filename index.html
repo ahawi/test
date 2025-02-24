@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Покупка</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="./styles/styles.css" />
+    <link rel="icon" href="./icons/favicon.png" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__inner container">
+        <div class="header__logo visible-desktop">
+          <a href="#" class="header__logo-link" aria-label="Go to main page"
+            ><img
+              class="header__logo-image"
+              src="./images/logo.svg"
+              alt=""
+              width="114"
+          /></a>
+        </div>
+        <div class="header__links visible-desktop">
+          <a href="#" class="header__link">People nearby</a>
+          <a href="#" class="header__link">Search</a>
+        </div>
+        <div class="header__buttons">
+          <button
+            class="header__menu-button hidden-desktop"
+            aria-label="Open menu"
+            onclick="mobileOverlay.showModal()"
+          >
+            <span class="header__menu-line"></span>
+            <span class="header__menu-line"></span>
+            <span class="header__menu-line"></span>
+          </button>
+          <div class="header__premium">
+            <button class="header__premium-button" aria-label="Buy Premium">
+              <span class="header__premium-title hidden-mobile">Premium</span>
+              <img
+                class="header__premium-image"
+                src="./icons/premium.svg"
+                alt=""
+                width="18"
+                height="15"
+              />
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="main container">
+      <section class="sidebar" aria-labelledby="sidebar-title">
+        <div class="sidebar__inner">
+          <h2 class="sidebar__title visually-hidden" id="sidebar-title">
+            User menu
+          </h2>
+          <div class="sidebar__top">
+            <img
+              class="sidebar__top-image"
+              src="./images/profile.png"
+              alt="User profile photo"
+              width="49"
+              height="49"
+            />
+            <div class="sidebar__top-container hidden-tablet">
+              <p class="sidebar__top-name">Test2412</p>
+              <a href="#" class="sidebar__premium" aria-label="Get Premium">
+                <span class="sidebar__premium-title">GET PREMIUM</span>
+              </a>
+            </div>
+          </div>
+          <div class="sidebar__body">
+            <nav class="sidebar__menu">
+              <ul class="sidebar__list">
+                <li class="sidebar__item">
+                  <a
+                    href="#"
+                    class="sidebar__link"
+                    aria-label="Go to my profile"
+                  >
+                    <svg
+                      class="sidebar__icon"
+                      width="24"
+                      height="24"
+                      aria-hidden="true"
+                    >
+                      <use xlink:href="/sprite.svg#profile" />
+                    </svg>
+                    <span class="sidebar__link-text hidden-tablet"
+                      >Profile</span
+                    >
+                  </a>
+                </li>
+                <li class="sidebar__item">
+                  <a
+                    href="#"
+                    class="sidebar__link"
+                    aria-label="Go to my photos"
+                  >
+                    <svg
+                      class="sidebar__icon"
+                      width="24"
+                      height="24"
+                      aria-hidden="true"
+                    >
+                      <use xlink:href="/sprite.svg#camera" />
+                    </svg>
+                    <span class="sidebar__link-text hidden-tablet"
+                      >My photos</span
+                    >
+                  </a>
+                </li>
+                <li class="sidebar__item">
+                  <a href="#" class="sidebar__link" aria-label="Go to messages">
+                    <svg
+                      class="sidebar__icon"
+                      width="24"
+                      height="24"
+                      aria-hidden="true"
+                    >
+                      <use xlink:href="/sprite.svg#chat" />
+                    </svg>
+                    <span class="sidebar__link-text hidden-tablet"
+                      >Messages</span
+                    >
+                  </a>
+                </li>
+                <li class="sidebar__item">
+                  <a
+                    href="#"
+                    class="sidebar__link"
+                    aria-label="Go to favorites"
+                  >
+                    <svg
+                      class="sidebar__icon"
+                      width="24"
+                      height="24"
+                      aria-hidden="true"
+                    >
+                      <use xlink:href="/sprite.svg#heart" />
+                    </svg>
+                    <span class="sidebar__link-text hidden-tablet"
+                      >Favorites</span
+                    >
+                  </a>
+                </li>
+                <li class="sidebar__item">
+                  <a href="#" class="sidebar__link" aria-label="Go to guests">
+                    <svg
+                      class="sidebar__icon"
+                      width="24"
+                      height="24"
+                      aria-hidden="true"
+                    >
+                      <use xlink:href="/sprite.svg#eye" />
+                    </svg>
+                    <span class="sidebar__link-text hidden-tablet">Guests</span>
+                  </a>
+                </li>
+                <li class="sidebar__item">
+                  <a href="#" class="sidebar__link" aria-label="Go to settings">
+                    <svg
+                      class="sidebar__icon"
+                      width="24"
+                      height="24"
+                      aria-hidden="true"
+                    >
+                      <use xlink:href="/sprite.svg#gear" />
+                    </svg>
+                    <span class="sidebar__link-text hidden-tablet"
+                      >Settings</span
+                    >
+                  </a>
+                </li>
+                <li class="sidebar__item">
+                  <a href="#" class="sidebar__link" aria-label="Log out">
+                    <svg
+                      class="sidebar__icon"
+                      width="22"
+                      height="22"
+                      aria-hidden="true"
+                    >
+                      <use xlink:href="/sprite.svg#exit" />
+                    </svg>
+                    <span class="sidebar__link-text hidden-tablet"
+                      >Log out</span
+                    >
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </section>
+
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero__inner">
+          <h1 class="hero__title" id="hero-title">Закончились кредиты?</h1>
+          <div class="hero__promo hidden-mobile">
+            <strong class="hero__promo-title">Скидка 40%</strong>
+            <p class="hero__promo-subtitle">Предложение действует в течение:</p>
+            <div class="hero__promo-timer">
+              <p data-js-timer>00:10:00</p>
+            </div>
+          </div>
+          <div class="hero__cards swiper" data-js-cards>
+            <div class="hero__cards-list swiper-wrapper" data-js-cards-list>
+              <div class="hero__cards-item swiper-slide card-buy" data-js-card>
+                <div class="card-buy__inner">
+                  <div class="card-buy__offer">One time offer!</div>
+                  <div class="card-buy__price">
+                    <p class="card-buy__price-title">50</p>
+                    <p class="card-buy__price-currency">CR</p>
+                    <p class="card-buy__price-title visible-mobile">/</p>
+                    <p class="card-buy__price-title visible-mobile">$5</p>
+                  </div>
+                  <a
+                    href="#"
+                    class="card-buy__button hidden-mobile"
+                    aria-label="Buy 50 credits for 5 dollars"
+                  >
+                    <span class="card-buy__button-title">Buy now</span>
+                  </a>
+                </div>
+              </div>
+              <div class="hero__cards-item swiper-slide card-buy" data-js-card>
+                <div class="card-buy__inner">
+                  <div class="card-buy__price">
+                    <p class="card-buy__price-title">150</p>
+                    <p class="card-buy__price-currency">CR</p>
+                    <p class="card-buy__price-title visible-mobile">/</p>
+                    <p class="card-buy__price-title visible-mobile">$15</p>
+                  </div>
+                  <a
+                    href="#"
+                    class="card-buy__button hidden-mobile"
+                    aria-label="Buy 100 credits for 10 dollars"
+                  >
+                    <span class="card-buy__button-title">Buy now</span>
+                  </a>
+                </div>
+              </div>
+              <div class="hero__cards-item swiper-slide card-buy" data-js-card>
+                <div class="card-buy__inner">
+                  <div class="card-buy__price">
+                    <p class="card-buy__price-title">300</p>
+                    <p class="card-buy__price-currency">CR</p>
+                    <p class="card-buy__price-title visible-mobile">/</p>
+                    <p class="card-buy__price-title visible-mobile">$30</p>
+                  </div>
+                  <a
+                    href="#"
+                    class="card-buy__button hidden-mobile"
+                    aria-label="Buy 300 credits for 30 dollars"
+                  >
+                    <span class="card-buy__button-title">Buy now</span>
+                  </a>
+                </div>
+              </div>
+              <div class="hero__cards-item swiper-slide card-buy" data-js-card>
+                <div class="card-buy__inner">
+                  <div class="card-buy__price">
+                    <p class="card-buy__price-title">500</p>
+                    <p class="card-buy__price-currency">CR</p>
+                    <p class="card-buy__price-title visible-mobile">/</p>
+                    <p class="card-buy__price-title visible-mobile">$50</p>
+                  </div>
+                  <a
+                    href="#"
+                    class="card-buy__button hidden-mobile"
+                    aria-label="Buy 500 credits for 50 dollars"
+                  >
+                    <span class="card-buy__button-title">Buy now</span>
+                  </a>
+                </div>
+              </div>
+              <div class="hero__cards-item swiper-slide card-buy" data-js-card>
+                <div class="card-buy__inner">
+                  <div class="card-buy__price">
+                    <p class="card-buy__price-title">1000</p>
+                    <p class="card-buy__price-currency">CR</p>
+                    <p class="card-buy__price-title visible-mobile">/</p>
+                    <p class="card-buy__price-title visible-mobile">$100</p>
+                  </div>
+                  <a
+                    href="#"
+                    class="card-buy__button hidden-mobile"
+                    aria-label="Buy 1000 credits for 100 dollars"
+                  >
+                    <span class="card-buy__button-title">Buy now</span>
+                  </a>
+                </div>
+              </div>
+              <div class="hero__cards-item hidden-mobile">
+                <div class="card-buy__inner">
+                  <div class="card-buy__price">
+                    <p class="card-buy__price-title">1000</p>
+                    <p class="card-buy__price-currency">CR</p>
+                    <p class="card-buy__price-title visible-mobile">/</p>
+                    <p class="card-buy__price-title visible-mobile">$100</p>
+                  </div>
+                  <a
+                    href="#"
+                    class="card-buy__button hidden-mobile"
+                    aria-label="Buy 1000 credits for 100 dollars"
+                  >
+                    <span class="card-buy__button-title">Buy now</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-pagination" data-js-swiper-pagination></div>
+          </div>
+          <a href="#" class="hero__try visible-mobile">
+            <span class="hero__try-title">Try now</span>
+          </a>
+          <div class="hero__checkbox">
+            <input
+              class="hero__checkbox-input"
+              type="checkbox"
+              id="agree-checkbox"
+            />
+
+            <label class="hero__checkbox-title" for="agree-checkbox"
+              >By clicking Checkbox you agree and accept our
+              <a href="#" class="hero__checkbox-link">Privacy Policy</a>, and
+              <a href="#" class="hero__checkbox-link">Terms of use</a></label
+            >
+          </div>
+          <div class="hero__benefits">
+            <img
+              class="hero__benefits-image"
+              src="./icons/premium-light.svg"
+              alt=""
+              width="81"
+              height="67"
+            />
+
+            <div class="hero__benefits-item--messages">
+              <div class="card-benefit" aria-label="Отправлять сообщения">
+                <div class="card-benefit__image">
+                  <svg
+                    class="card-benefit__icon"
+                    width="24"
+                    height="24"
+                    aria-hidden="true"
+                  >
+                    <use xlink:href="/sprite.svg#chat" />
+                  </svg>
+                </div>
+                <p class="card-benefit__title">Отправлять сообщения</p>
+              </div>
+            </div>
+            <div class="hero__benefits-item--view">
+              <div class="card-benefit" aria-label="Просматривать скрытые фото">
+                <div class="card-benefit__image">
+                  <svg
+                    class="card-benefit__icon"
+                    width="24"
+                    height="24"
+                    aria-hidden="true"
+                  >
+                    <use xlink:href="/sprite.svg#eye" />
+                  </svg>
+                </div>
+                <p class="card-benefit__title">Просматривать скрытые фото</p>
+              </div>
+            </div>
+            <div class="hero__benefits-item--pay">
+              <div class="card-benefit" aria-label="Оплачивать подарки">
+                <div class="card-benefit__image">
+                  <svg
+                    class="card-benefit__icon"
+                    width="24"
+                    height="24"
+                    aria-hidden="true"
+                  >
+                    <use xlink:href="/sprite.svg#gift" />
+                  </svg>
+                </div>
+                <p class="card-benefit__title">Оплачивать подарки</p>
+              </div>
+            </div>
+            <div class="hero__benefits-item--use">
+              <div
+                class="card-benefit"
+                aria-label="Пользоваться другими премиум функциями"
+              >
+                <div class="card-benefit__image">
+                  <svg
+                    class="card-benefit__icon"
+                    width="24"
+                    height="24"
+                    aria-hidden="true"
+                  >
+                    <use xlink:href="/sprite.svg#heart" />
+                  </svg>
+                </div>
+                <p class="card-benefit__title">
+                  Пользоваться другими премиум функциями
+                </p>
+              </div>
+            </div>
+            <div class="hero__benefits-item--view2 hidden-mobile-s">
+              <div class="card-benefit" aria-label="Просматривать скрытые фото">
+                <div class="card-benefit__image">
+                  <svg
+                    class="card-benefit__icon"
+                    width="24"
+                    height="24"
+                    aria-hidden="true"
+                  >
+                    <use xlink:href="/sprite.svg#chat" />
+                  </svg>
+                </div>
+                <p class="card-benefit__title">Просматривать скрытые фото</p>
+              </div>
+            </div>
+            <div class="hero__benefits-item--view3 hidden-mobile-s">
+              <div class="card-benefit" aria-label="Просматривать скрытые фото">
+                <div class="card-benefit__image">
+                  <svg
+                    class="card-benefit__icon"
+                    width="24"
+                    height="24"
+                    aria-hidden="true"
+                  >
+                    <use xlink:href="/sprite.svg#gear" />
+                  </svg>
+                </div>
+                <p class="card-benefit__title">Просматривать скрытые фото</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div class="parallax visible-desktop">
+      <img
+        class="parallax__left"
+        src="./images/group-1.png"
+        alt=""
+        loading="lazy"
+        data-js-parallax-left
+        aria-hidden="true"
+      />
+      <img
+        class="parallax__right"
+        src="./images/group-2.png"
+        alt=""
+        loading="lazy"
+        data-js-parallax-right
+        aria-hidden="true"
+      />
+    </div>
+
+    <dialog class="sidebar__overlay hidden-desktop" id="mobileOverlay">
+      <form class="sidebar__overlay-wrapper" method="dialog">
+        <button class="sidebar__overlay-button" type="submit">
+          <span class="visually-hidden">Close navigation menu</span>
+        </button>
+      </form>
+      <div class="sidebar__top">
+        <img
+          class="sidebar__top-image"
+          src="./images/profile.png"
+          alt="User profile photo"
+          width="49"
+          height="49"
+        />
+        <div class="sidebar__top-container">
+          <p class="sidebar__top-name">Test2412</p>
+          <a href="#" class="sidebar__premium" aria-label="Get Premium">
+            <span class="sidebar__premium-title">GET PREMIUM</span>
+          </a>
+        </div>
+      </div>
+      <div class="sidebar__body">
+        <nav class="sidebar__menu">
+          <ul class="sidebar__list">
+            <li class="sidebar__item">
+              <a href="#" class="sidebar__link" aria-label="Go to my profile">
+                <svg
+                  class="sidebar__icon"
+                  width="24"
+                  height="24"
+                  aria-hidden="true"
+                >
+                  <use xlink:href="/sprite.svg#profile" />
+                </svg>
+                <span class="sidebar__link-text hidden-tablet">Profile</span>
+              </a>
+            </li>
+            <li class="sidebar__item">
+              <a href="#" class="sidebar__link" aria-label="Go to my photos">
+                <svg
+                  class="sidebar__icon"
+                  width="24"
+                  height="24"
+                  aria-hidden="true"
+                >
+                  <use xlink:href="/sprite.svg#camera" />
+                </svg>
+                <span class="sidebar__link-text hidden-tablet">My photos</span>
+              </a>
+            </li>
+            <li class="sidebar__item">
+              <a href="#" class="sidebar__link" aria-label="Go to messages">
+                <svg
+                  class="sidebar__icon"
+                  width="24"
+                  height="24"
+                  aria-hidden="true"
+                >
+                  <use xlink:href="/sprite.svg#chat" />
+                </svg>
+                <span class="sidebar__link-text hidden-tablet">Messages</span>
+              </a>
+            </li>
+            <li class="sidebar__item">
+              <a href="#" class="sidebar__link" aria-label="Go to favorites">
+                <svg
+                  class="sidebar__icon"
+                  width="24"
+                  height="24"
+                  aria-hidden="true"
+                >
+                  <use xlink:href="/sprite.svg#heart" />
+                </svg>
+                <span class="sidebar__link-text hidden-tablet">Favorites</span>
+              </a>
+            </li>
+            <li class="sidebar__item">
+              <a href="#" class="sidebar__link" aria-label="Go to guests">
+                <svg
+                  class="sidebar__icon"
+                  width="24"
+                  height="24"
+                  aria-hidden="true"
+                >
+                  <use xlink:href="/sprite.svg#eye" />
+                </svg>
+                <span class="sidebar__link-text hidden-tablet">Guests</span>
+              </a>
+            </li>
+            <li class="sidebar__item">
+              <a href="#" class="sidebar__link" aria-label="Go to settings">
+                <svg
+                  class="sidebar__icon"
+                  width="24"
+                  height="24"
+                  aria-hidden="true"
+                >
+                  <use xlink:href="/sprite.svg#gear" />
+                </svg>
+                <span class="sidebar__link-text hidden-tablet">Settings</span>
+              </a>
+            </li>
+            <li class="sidebar__item">
+              <a href="#" class="sidebar__link" aria-label="Log out">
+                <svg
+                  class="sidebar__icon"
+                  width="22"
+                  height="22"
+                  aria-hidden="true"
+                >
+                  <use xlink:href="/sprite.svg#exit" />
+                </svg>
+                <span class="sidebar__link-text hidden-tablet">Log out</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </dialog>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="./js/index.js" defer></script>
+  </body>
+</html>

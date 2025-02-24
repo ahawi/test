@@ -1,0 +1,14 @@
+@use '../helpers/' as *;
+
+.main {
+  margin-top: rem(15);
+  width: 100%;
+
+  @include desktop-above {
+    display: flex;
+    margin-block: rem(30);
+    column-gap: rem(30);
+    justify-content: space-between;
+    position: relative;
+  }
+}
