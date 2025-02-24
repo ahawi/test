@@ -1025,6 +1025,7 @@ a {
 }
 .sidebar__overlay-button {
   position: relative;
+  outline: none;
 }
 .sidebar__overlay-button::before, .sidebar__overlay-button::after {
   position: absolute;
@@ -1034,6 +1035,7 @@ a {
   translate: -50% -50%;
   width: 0.125rem;
   background-color: var(--color-purple);
+  border-radius: 0.3125rem;
 }
 .sidebar__overlay-button::before {
   height: 1.5625rem;
@@ -1042,6 +1044,9 @@ a {
 .sidebar__overlay-button::after {
   height: 1.5625rem;
   transform: rotate(-45deg);
+}
+.sidebar__overlay-button:focus {
+  outline: none;
 }
 .sidebar__overlay:modal {
   max-width: 100%;

@@ -101,6 +101,7 @@
 
     &-button {
       position: relative;
+      outline: none;
 
       &::before,
       &::after {
@@ -111,6 +112,7 @@
         translate: -50% -50%;
         width: rem(2);
         background-color: var(--color-purple);
+        border-radius: rem(5);
       }
 
       &::before {
@@ -121,6 +123,10 @@
       &::after {
         height: rem(25);
         transform: rotate(-45deg);
+      }
+
+      &:focus {
+        outline: none;
       }
     }
 
